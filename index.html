@@ -3,260 +3,309 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Saisree | SQL Developer & QA Portfolio</title>
+<title>Saisree | SQL Developer & QA Analyst Portfolio</title>
 <style>
-  /* Reset and base */
+  /* Reset & base */
   * {
-    box-sizing: border-box;
+    margin: 0; padding: 0; box-sizing: border-box;
   }
   body {
-    margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f9fafb;
-    color: #1f2937;
+    color: #1e293b;
     line-height: 1.6;
   }
   a {
-    color: #1e40af;
+    color: #2563eb;
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
   }
-  /* Navbar */
-  nav {
-    background: #1e40af;
-    position: sticky;
-    top: 0;
-    padding: 1rem 2rem;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999;
-  }
-  nav .logo {
-    font-size: 1.4rem;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  nav ul li {
-    cursor: pointer;
-  }
+
   /* Container */
   .container {
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
   }
-  /* About Me */
-  #about {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid #e0e7ff;
+
+  /* Header */
+  header {
+    background-color: #2563eb;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
   }
-  #about img {
-    width: 150px;
-    height: 150px;
+  header img {
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #1e40af;
-  }
-  #about .bio {
-    flex: 1;
-  }
-  #about .bio h1 {
-    margin: 0 0 0.3rem 0;
-  }
-  #about .bio p {
-    font-style: italic;
-    color: #374151;
-  }
-  /* Section Titles */
-  h2 {
-    color: #1e40af;
-    border-left: 5px solid #1e40af;
-    padding-left: 0.6rem;
+    border: 4px solid white;
     margin-bottom: 1rem;
-    margin-top: 3rem;
   }
-  /* Lists */
-  ul {
-    padding-left: 1.2rem;
-    margin-top: 0;
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
   }
-  /* Cards for Experience and Projects */
-  .card {
-    background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    margin-bottom: 1.5rem;
+  header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
-  .card h3 {
-    margin-top: 0;
-    color: #1e40af;
+  header .contact {
+    margin-top: 0.7rem;
+    font-size: 0.95rem;
   }
-  .card p {
-    margin: 0.3rem 0 1rem 0;
-    color: #374151;
-  }
-  .card ul li {
-    margin-bottom: 0.5rem;
-  }
-  /* PDF Link Button */
-  .pdf-link a {
+  header .contact span {
     display: inline-block;
-    margin-top: 0.6rem;
-    padding: 0.5rem 1.2rem;
-    background-color: #1e40af;
-    color: white;
-    border-radius: 5px;
+    margin: 0 0.7rem;
+  }
+
+  /* About Me */
+  #about {
+    margin-top: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.05);
+  }
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #2563eb;
+    padding-left: 0.8rem;
+    color: #2563eb;
+  }
+  #about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  #about .about-text {
+    flex: 1 1 60%;
+    font-size: 1.1rem;
+    color: #334155;
+  }
+  #about .about-photo {
+    flex: 1 1 35%;
+    text-align: center;
+  }
+  #about .about-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #2563eb;
+    object-fit: cover;
+  }
+
+  /* Section titles */
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #2563eb;
+    padding-left: 0.8rem;
+    color: #2563eb;
+  }
+
+  /* Skills */
+  #skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    color: #475569;
+  }
+  #skills ul li {
+    background: #e0e7ff;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
     font-weight: 600;
   }
-  .pdf-link a:hover {
-    background-color: #3746d6;
+
+  /* Experience & Projects */
+  .card {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.07);
   }
+  .card h3 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  .card p {
+    font-size: 0.95rem;
+    color: #475569;
+  }
+  .card ul {
+    margin-top: 0.7rem;
+    padding-left: 1.2rem;
+    color: #334155;
+  }
+  .card ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* PDF link */
+  .pdf-link a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.45rem 1rem;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .pdf-link a:hover {
+    background-color: #1e40af;
+  }
+
   /* Footer */
   footer {
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-    color: #6b7280;
-    border-top: 1px solid #d1d5db;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
   }
+
   /* Responsive */
   @media (max-width: 600px) {
-    #about {
+    #about .about-content {
       flex-direction: column;
-      text-align: center;
     }
-    #about img {
-      margin-bottom: 1rem;
+    #about .about-photo, #about .about-text {
+      flex: 1 1 100%;
     }
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">Saisree</div>
-  <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-  </ul>
-</nav>
-
-<div class="container">
-
-  <section id="about">
-    <img src="Saisree_Photo.jpg" alt="Saisree Photo" />
-    <div class="bio">
-      <h1>Saisree</h1>
-      <p><strong>SQL Developer & Quality Assurance Analyst</strong> | MSc Computer Science</p>
-      <p>Based in the UK (Right to Work - Dependant Visa) | 📞 07407423776 | ✉️ nagasaisreen@gmail.com</p>
-      <p>
-        Results-driven SQL Developer with 4 years of experience combining database development and manual testing skills in healthcare and HR domains. Skilled in writing complex queries, optimizing database performance, and automating workflows. Experienced in manual and automated testing with strong attention to detail. I also expanded my programming skills by learning Python through <a href="https://codefirstgirls.org.uk/" target="_blank" rel="noopener">Code First Girls</a>.
-      </p>
+  <header>
+    <img src="photo.jpg" alt="Saisree">
+    <h1>Saisree</h1>
+    <p>SQL Developer & Quality Assurance Analyst | MSc Computer Science</p>
+    <div class="contact">
+      <span>📞 07407423776</span>
+      <span>✉️ <a href="mailto:nagasaisreen@gmail.com">nagasaisreen@gmail.com</a></span>
+      <span>🌍 <a href="https://www.linkedin.com/in/naga-saisree/" target="_blank" rel="noopener">LinkedIn</a></span>
+      <span>🇬🇧 RTW - Dependant Visa</span>
     </div>
-  </section>
+  </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>SQL & Databases:</strong> MySQL, Oracle PL/SQL, complex query writing, stored procedures, functions, triggers, indexing, query optimization</li>
-      <li><strong>Testing:</strong> Manual Testing, Regression, Functional, Exploratory Testing, Test Case Development, Defect Reporting, Katalon Studio (Automation)</li>
-      <li><strong>Tools & Platforms:</strong> Azure Boards, GitHub, JIRA, Katalon Studio, Visual Studio Code</li>
-      <li><strong>Programming & Scripting:</strong> Python (self-taught via Code First Girls), JavaScript, HTML5, CSS3</li>
-      <li><strong>Methodologies:</strong> Agile Scrum, SDLC, TDD (Test Driven Development)</li>
-      <li><strong>UI/UX:</strong> Figma, User-Centered Design (UCD), Accessibility Best Practices</li>
-    </ul>
-  </section>
+  <main class="container">
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-
-    <div class="card">
-      <h3>Programmer Analyst</h3>
-      <p><strong>Cognizant Technology Solutions, India</strong> | May 2022 – June 2023</p>
-      <ul>
-        <li>Designed, optimized, and maintained complex SQL queries, stored procedures, views, and triggers for a U.S. healthcare insurance platform, ensuring efficient data retrieval and process automation.</li>
-        <li>Conducted detailed manual testing of healthcare insurance software, including writing and executing test cases covering edge cases and functional scenarios.</li>
-        <li>Automated repetitive testing tasks by building scripts using Katalon Studio, improving regression testing efficiency by 30%.</li>
-        <li>Validated backend data accuracy through SQL queries, ensuring the integrity of insurance claims and policy data.</li>
-        <li>Collaborated in Agile Scrum teams using Azure Boards for sprint planning and GitHub for version control, participating actively in daily stand-ups and retrospectives.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Systems Engineer</h3>
-      <p><strong>TATA Consultancy Services, India</strong> | July 2019 – May 2022</p>
-      <ul>
-        <li>Managed and supported the internal HR application Ultimatix, focusing on the employee separation workflow and automating manual processes with SQL functions and scripts.</li>
-        <li>Developed real-time reporting views and automated SQL jobs that reduced manual work by 20%, enhancing operational efficiency for HR managers.</li>
-        <li>Performed comprehensive manual testing of application updates, regression tests, and usability improvements, reporting defects with clear, actionable feedback.</li>
-        <li>Collaborated with cross-functional teams in Agile environments, contributing to sprint planning, daily stand-ups, and continuous system improvements.</li>
-        <li>Implemented index tuning and query optimization strategies that improved database response times and system performance.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>Automated Email Template System (Master's Project)</h3>
-      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
-      <ul>
-        <li>Developed a web-based email template builder to help academic staff at Swansea University streamline responses to student inquiries, especially for extenuating circumstances.</li>
-        <li>Conducted user research to understand pain points and designed high-fidelity prototypes using Figma applying User-Centered Design principles.</li>
-        <li>Implemented an accessible, clean front-end interface automating repetitive tasks, resulting in a significant improvement in communication efficiency.</li>
-        <li>Followed a structured waterfall methodology through requirement gathering, design, development, and testing phases.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Temu Accessibility Prototype (Human-Computer Interaction Coursework)</h3>
-      <p><strong>Technologies:</strong> Figma</p>
-      <ul>
-        <li>Designed a comprehensive Figma prototype addressing usability and accessibility issues in the Temu mobile app based on detailed user feedback.</li>
-        <li>Incorporated features such as customizable text sizes, contrast settings, grayscale/inverted colors, and simplified navigation to enhance inclusivity.</li>
-        <li>Demonstrated a strong grasp of inclusive design and accessibility standards, improving overall user experience.</li>
-      </ul>
-      <div class="pdf-link">
-        <a href="temu-prototype.pdf" target="_blank" rel="noopener">View Prototype PDF</a>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a driven and detail-oriented SQL Developer and Quality Assurance Analyst with 4 years of professional experience in India and the UK. I bring a rare blend of skills in database development, query optimization, and automation alongside strong manual and automated testing capabilities.</p>
+          <p>My background includes optimizing complex healthcare and HR systems by designing efficient SQL queries, stored procedures, and automating workflows to boost performance and reduce manual effort.</p>
+          <p>As a QA Analyst, I have meticulously crafted test cases, performed regression and exploratory testing, and leveraged automation tools like Katalon Studio to ensure software reliability and data integrity.</p>
+          <p>Alongside my professional experience, I have learned Python through Code First Girls, expanding my programming toolkit to support automation and data analysis tasks.</p>
+          <p>This combination of development and QA skills makes me a valuable asset to teams seeking to bridge the gap between data engineering and software quality.</p>
+        </div>
+        <div class="about-photo">
+          <img src="Saisree_Photo.jpg" alt="Saisree Photo" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>MSc Computer Science</h3>
-      <p><strong>Swansea University, UK</strong> | Sep 2023 – Dec 2024 (Ongoing)</p>
+    <section id="skills">
+      <h2>Skills</h2>
       <ul>
-        <li>Specialization in Database Design, Web Development, and SQL Programming</li>
-        <li>Practical experience with cloud computing, Python, ETL pipelines, and Java integration</li>
-        <li>Developed backend-driven applications and normalized database schemas through coursework and projects</li>
+        <li><strong>SQL:</strong> MySQL, Oracle PL/SQL, Complex Query Writing, Performance Tuning, Stored Procedures, Indexing</li>
+        <li><strong>Quality Assurance:</strong> Manual Testing, Regression Testing, Functional Testing, Exploratory Testing, Test Case Design, Defect Reporting</li>
+        <li><strong>Automation Tools:</strong> Katalon Studio, Azure Boards</li>
+        <li><strong>Version Control:</strong> Git, GitHub</li>
+        <li><strong>Programming & Web:</strong> Python (Code First Girls), JavaScript, HTML5, CSS3</li>
+        <li><strong>Methodologies:</strong> Agile Scrum, SDLC, TDD</li>
+        <li><strong>UI/UX:</strong> Figma, User-Centered Design, Accessibility Principles</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-</div>
+    <section id="experience">
+      <h2>Professional Experience</h2>
 
-<footer>
-  &copy; 2025 Saisree | Portfolio designed for SQL Developer & QA roles
-</footer>
+      <div class="card">
+        <h3>Programmer Analyst</h3>
+        <p><strong>Cognizant Technology Solutions, India</strong> | May 2022 – June 2023</p>
+        <ul>
+          <li>Designed and optimized complex SQL queries, stored procedures, and views to support a large-scale U.S. healthcare insurance system, improving data retrieval speed by 15%.</li>
+          <li>Conducted unit testing on SQL functions and stored procedures to ensure correctness and performance under real-world scenarios.</li>
+          <li>Performed detailed manual testing for web and database components; identified and documented defects to improve software quality.</li>
+          <li>Automated regression test cases using Katalon Studio, reducing testing time by 25% and increasing test coverage.</li>
+          <li>Collaborated within Agile Scrum teams using Azure Boards and GitHub to manage tasks, defects, and code repositories.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Systems Engineer</h3>
+        <p><strong>Tata Consultancy Services, India</strong> | July 2019 – May 2022</p>
+        <ul>
+          <li>Developed SQL functions and automated reports to support HR systems used by over 1,000 employees, improving reporting accuracy and speed.</li>
+          <li>Designed and executed manual test cases covering functional, regression, and exploratory testing, ensuring system reliability during releases.</li>
+          <li>Reduced manual work by 20% by automating recurring SQL jobs and database maintenance tasks.</li>
+          <li>Gathered QA feedback and collaborated closely with developers to enhance system usability and reduce post-release defects.</li>
+          <li>Participated actively in Agile ceremonies and sprint planning to deliver timely updates and bug fixes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Key Projects</h2>
+
+      <div class="card">
+        <h3>Automated Email Template System</h3>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
+        <ul>
+          <li>Developed a dynamic web-based email template builder that streamlined academic email responses, reducing email preparation time by 40%.</li>
+          <li>Applied user-centered design principles, created detailed Figma prototypes, and implemented accessible front-end UI that met WCAG standards.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Temu Accessibility Prototype</h3>
+        <p><strong>Technologies:</strong> Figma</p>
+        <ul>
+          <li>Redesigned the Temu mobile app interface focusing on accessibility improvements such as text resizing, contrast toggles, and simplified navigation flows.</li>
+          <li>Produced a comprehensive accessibility prototype PDF for stakeholder review and usability testing.</li>
+        </ul>
+        <div class="pdf-link">
+          <a href="temu-prototype.pdf" target="_blank" rel="noopener">View Prototype PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <p><strong>MSc Computer Science</strong><br />
+        Swansea University, UK | Sept 2023 – Dec 2024</p>
+        <ul>
+          <li>Focused on Database Design, Web Development, and SQL Programming.</li>
+          <li>Hands-on experience with cloud technologies, Python, ETL processes, and Java integration.</li>
+          <li>Developed backend-driven applications and database schemas leveraging Java and SQL.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Saisree | SQL Developer & Quality Assurance Analyst | Designed for UK Job Market</p>
+  </footer>
 
 </body>
 </html>
