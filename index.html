@@ -40,6 +40,20 @@
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(37, 99, 235, 0.45);
   }
+
+  /* LinkedIn top bar */
+  .linkedin-top {
+    margin-bottom: 1.5rem;
+  }
+  .linkedin-top a {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .linkedin-top a:hover {
+    text-decoration: underline;
+  }
+
   header img {
     width: 140px;
     height: 140px;
@@ -216,13 +230,18 @@
 <body>
 
   <header>
-    <img src="photo.jpg" alt="Saisree Photo" />
+    <div class="linkedin-top">
+      <a href="https://www.linkedin.com/in/naga-saisree/" target="_blank" rel="noopener" aria-label="LinkedIn Profile Link">
+        🔗 LinkedIn Profile
+      </a>
+    </div>
+
+    <img src="Saisree_Photo.jpg" alt="Saisree Photo" />
     <h1>Saisree</h1>
     <p>SQL Developer & Quality Assurance Analyst | MSc Computer Science</p>
     <div class="contact" aria-label="Contact Information">
       <span>📞 07407423776</span>
       <span>✉️ <a href="mailto:nagasaisreen@gmail.com" target="_blank" rel="noopener">nagasaisreen@gmail.com</a></span>
-      <span>🔗 <a href="https://www.linkedin.com/in/naga-saisree/" target="_blank" rel="noopener">LinkedIn Profile</a></span>
       <span>🇬🇧 Right to Work – Dependant Visa</span>
     </div>
   </header>
@@ -240,7 +259,7 @@
           <p>This combination of development and QA skills makes me a valuable asset to teams seeking to bridge the gap between data engineering and software quality.</p>
         </div>
         <div class="about-photo">
-          <img src="Saisree_Photo.jpg" alt="Saisree Photo" />
+          <img src="photo.jpg" alt="Saisree Photo" />
         </div>
       </div>
     </section>
@@ -291,43 +310,21 @@
 
       <div class="card">
         <h3>Automated Email Template System</h3>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
-        <ul>
-          <li>Developed a dynamic web-based email template builder that streamlined academic email responses, reducing email preparation time by 40%.</li>
-          <li>Applied user-centered design principles, created detailed Figma prototypes, and implemented accessible front-end UI that met WCAG standards.</li>
-        </ul>
+        <p>Developed dynamic email templates using SQL Server that pull data from multiple tables to send personalized client communications, reducing manual email preparation time by 60%.</p>
       </div>
 
       <div class="card">
-        <h3>Temu Accessibility Prototype</h3>
-        <p><strong>Technologies:</strong> Figma</p>
-        <ul>
-          <li>Redesigned the Temu mobile app interface focusing on accessibility improvements such as text resizing, contrast toggles, and simplified navigation flows.</li>
-          <li>Produced a comprehensive accessibility prototype PDF for stakeholder review and usability testing.</li>
-        </ul>
-        <div class="pdf-link">
-          <a href="temu-prototype.pdf" target="_blank" rel="noopener">View Prototype PDF</a>
-        </div>
+        <h3>QA Automation with Katalon Studio</h3>
+        <p>Designed and implemented automated test scripts for a financial services web application, increasing defect detection in regression cycles by 40% and accelerating release schedules.</p>
       </div>
-    </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <p><strong>MSc Computer Science</strong><br />
-        Swansea University, UK | Sept 2023 – Dec 2024</p>
-        <ul>
-          <li>Focused on Database Design, Web Development, and SQL Programming.</li>
-          <li>Hands-on experience with cloud technologies, Python, ETL processes, and Java integration.</li>
-          <li>Developed backend-driven applications and database schemas leveraging Java and SQL.</li>
-        </ul>
-      </div>
+      
     </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2025 Saisree | SQL Developer & Quality Assurance Analyst | Designed for UK Job Market</p>
+    &copy; 2025 Saisree. All rights reserved.
   </footer>
 
 </body>
