@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Project Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saisree | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header, footer { text-align: center; padding: 2rem; background: #333; color: white; }
-    h1 { margin-bottom: 0.2em; }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 2rem; }
-    .project-card { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .project-card h2 { margin-top: 0; }
-    .project-card a { text-decoration: none; color: #007BFF; }
-    footer a { color: #ddd; text-decoration: none; margin: 0 0.5rem; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    header {
+      background-color: #1e40af;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    .contact {
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #1e40af;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .project {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e40af;
+      color: white;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Saisree</h1>
+    <div class="contact">
+      <p>📞 07407423776 | ✉️ nagasaisreen@gmail.com</p>
+    </div>
+  </header>
 
-<header>
-  <h1>Your Name</h1>
-  <p>UI/UX & Front-End Developer</p>
-</header>
+  <main>
+    <section>
+      <h2>Summary</h2>
+      <p>Highly motivated and detail-oriented Computer Science Master's graduate with a strong foundation in Human-Computer Interaction and a passion for building intuitive, accessible, and visually appealing user interfaces. Proficient in UI/UX design using Figma and skilled in front-end development with HTML, CSS, and JavaScript.</p>
+    </section>
 
-<section class="projects">
-  <div class="project-card">
-    <h2>Automated Email Template System</h2>
-    <p><strong>Role:</strong> Lead Developer & UI/UX Designer</p>
-    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
-    <p>Built for Swansea University staff to streamline email responses using a web-based tool. Focused on usability, automation, and accessibility using UCD methods.</p>
-    <!-- Optional links -->
-    <!-- <a href="https://github.com/yourname/email-template-project" target="_blank">View on GitHub</a> -->
-  </div>
+    <section>
+      <h2>Education</h2>
+      <p><strong>Master of Science in Computer Science</strong><br>Swansea University, UK | Sep 2023 – Dec 2024</p>
+      <p><em>Relevant Coursework:</em> Human-Computer Interaction, Web Development, Software Engineering Principles, User-Centered Design.</p>
+    </section>
 
-  <div class="project-card">
-    <h2>Temu Accessibility Prototype</h2>
-    <p><strong>Role:</strong> UI/UX Designer & Researcher</p>
-    <p><strong>Technologies:</strong> Figma</p>
-    <p>Redesigned Temu’s mobile UI for better accessibility: improved navigation, contrast, font controls, and grayscale filters. Based on user research and accessibility principles.</p>
-  </div>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Front-End Development: HTML5, CSS3 (Responsive Design, Grid/Flexbox, Animations, Accessibility Best Practices), JavaScript</li>
+        <li>UI/UX Design & Prototyping: Figma, User-Centered Design (UCD), Prototyping</li>
+        <li>Version Control: Git</li>
+        <li>Methodologies: Agile SCRUM (Understanding), Waterfall Methodology (Experience)</li>
+      </ul>
+    </section>
 
-  <!-- Add more projects below as needed -->
-</section>
+    <section>
+      <h2>Projects</h2>
 
-<footer>
-  <p>📧 your.email@example.com</p>
-  <p>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-  </p>
-</footer>
+      <div class="project">
+        <h3>Automated Email Template System</h3>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
+        <ul>
+          <li>Developed a web-based email templating system for academic staff at Swansea University to streamline responses to student inquiries.</li>
+          <li>Used User-Centered Design (UCD) approach, conducted user research to identify pain points and informed design decisions.</li>
+          <li>Created high-fidelity mockups and prototypes in Figma.</li>
+          <li>Implemented a clean, accessible front-end using HTML, CSS, and JS.</li>
+          <li>Improved communication efficiency through automation and design.</li>
+          <li>Followed structured Waterfall methodology from requirement gathering to testing.</li>
+        </ul>
+      </div>
 
+      <div class="project">
+        <h3>Temu Accessibility Prototype</h3>
+        <p><strong>Technologies:</strong> Figma</p>
+        <ul>
+          <li>Designed a comprehensive Figma prototype to address usability and accessibility flaws in the Temu mobile app based on user feedback.</li>
+          <li>Enhanced user experience via better notification management and accessibility features.</li>
+          <li>Proposed solutions like customizable text size, contrast settings, grayscale/inverted color modes, and simplified navigation.</li>
+          <li>Demonstrated strong understanding of inclusive and accessible design principles.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Saisree</p>
+  </footer>
 </body>
 </html>
