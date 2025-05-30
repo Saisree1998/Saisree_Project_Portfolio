@@ -1,138 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saisree | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-    }
-    header {
-      background-color: #1e40af;
-      color: white;
-      padding: 2rem 1rem;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Saisree | SQL Developer & QA Portfolio</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+  }
+  a {
+    color: #1e40af;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Navbar */
+  nav {
+    background: #1e40af;
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  nav .logo {
+    font-size: 1.4rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav ul li {
+    cursor: pointer;
+  }
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  /* About Me */
+  #about {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e0e7ff;
+  }
+  #about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1e40af;
+  }
+  #about .bio {
+    flex: 1;
+  }
+  #about .bio h1 {
+    margin: 0 0 0.3rem 0;
+  }
+  #about .bio p {
+    font-style: italic;
+    color: #374151;
+  }
+  /* Section Titles */
+  h2 {
+    color: #1e40af;
+    border-left: 5px solid #1e40af;
+    padding-left: 0.6rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+  /* Lists */
+  ul {
+    padding-left: 1.2rem;
+    margin-top: 0;
+  }
+  /* Cards for Experience and Projects */
+  .card {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    margin-bottom: 1.5rem;
+  }
+  .card h3 {
+    margin-top: 0;
+    color: #1e40af;
+  }
+  .card p {
+    margin: 0.3rem 0 1rem 0;
+    color: #374151;
+  }
+  .card ul li {
+    margin-bottom: 0.5rem;
+  }
+  /* PDF Link Button */
+  .pdf-link a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #1e40af;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .pdf-link a:hover {
+    background-color: #3746d6;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+    border-top: 1px solid #d1d5db;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    #about {
+      flex-direction: column;
       text-align: center;
     }
-    header h1 {
-      margin-bottom: 0.5rem;
+    #about img {
+      margin-bottom: 1rem;
     }
-    .contact {
-      font-size: 0.95rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #1e40af;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .project {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-top: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .pdf-link {
-      margin-top: 0.5rem;
-    }
-    .pdf-link a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #1e40af;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .pdf-link a:hover {
-      background-color: #3746d6;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e40af;
-      color: white;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Saisree</h1>
-    <div class="contact">
-      <p>📞 07407423776 | ✉️ nagasaisreen@gmail.com</p>
+
+<nav>
+  <div class="logo">Saisree</div>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <section id="about">
+    <img src="photo.jpg" alt="Saisree Photo" />
+    <div class="bio">
+      <h1>Saisree</h1>
+      <p><strong>SQL Developer & Quality Assurance Analyst</strong> | MSc Computer Science</p>
+      <p>Based in the UK (Right to Work - Dependant Visa) | 📞 07407423776 | ✉️ nagasaisreen@gmail.com</p>
+      <p>
+        Results-driven SQL Developer with 4 years of experience combining database development and manual testing skills in healthcare and HR domains. Skilled in writing complex queries, optimizing database performance, and automating workflows. Experienced in manual and automated testing with strong attention to detail. I also expanded my programming skills by learning Python through <a href="https://codefirstgirls.org.uk/" target="_blank" rel="noopener">Code First Girls</a>.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section>
-      <h2>Summary</h2>
-      <p>Highly motivated and detail-oriented Computer Science Master's graduate with a strong foundation in Human-Computer Interaction and a passion for building intuitive, accessible, and visually appealing user interfaces. Proficient in UI/UX design using Figma and skilled in front-end development with HTML, CSS, and JavaScript.</p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>SQL & Databases:</strong> MySQL, Oracle PL/SQL, complex query writing, stored procedures, functions, triggers, indexing, query optimization</li>
+      <li><strong>Testing:</strong> Manual Testing, Regression, Functional, Exploratory Testing, Test Case Development, Defect Reporting, Katalon Studio (Automation)</li>
+      <li><strong>Tools & Platforms:</strong> Azure Boards, GitHub, JIRA, Katalon Studio, Visual Studio Code</li>
+      <li><strong>Programming & Scripting:</strong> Python (self-taught via Code First Girls), JavaScript, HTML5, CSS3</li>
+      <li><strong>Methodologies:</strong> Agile Scrum, SDLC, TDD (Test Driven Development)</li>
+      <li><strong>UI/UX:</strong> Figma, User-Centered Design (UCD), Accessibility Best Practices</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Master of Science in Computer Science</strong><br>Swansea University, UK | Sep 2023 – Dec 2024</p>
-      <p><em>Relevant Coursework:</em> Human-Computer Interaction, Web Development, Software Engineering Principles, User-Centered Design.</p>
-    </section>
+  <section id="experience">
+    <h2>Professional Experience</h2>
 
-    <section>
-      <h2>Skills</h2>
+    <div class="card">
+      <h3>Programmer Analyst</h3>
+      <p><strong>Cognizant Technology Solutions, India</strong> | May 2022 – June 2023</p>
       <ul>
-        <li>Front-End Development: HTML5, CSS3 (Responsive Design, Grid/Flexbox, Animations, Accessibility Best Practices), JavaScript</li>
-        <li>UI/UX Design & Prototyping: Figma, User-Centered Design (UCD), Prototyping</li>
-        <li>Version Control: Git</li>
-        <li>Methodologies: Agile SCRUM (Understanding), Waterfall Methodology (Experience)</li>
+        <li>Designed, optimized, and maintained complex SQL queries, stored procedures, views, and triggers for a U.S. healthcare insurance platform, ensuring efficient data retrieval and process automation.</li>
+        <li>Conducted detailed manual testing of healthcare insurance software, including writing and executing test cases covering edge cases and functional scenarios.</li>
+        <li>Automated repetitive testing tasks by building scripts using Katalon Studio, improving regression testing efficiency by 30%.</li>
+        <li>Validated backend data accuracy through SQL queries, ensuring the integrity of insurance claims and policy data.</li>
+        <li>Collaborated in Agile Scrum teams using Azure Boards for sprint planning and GitHub for version control, participating actively in daily stand-ups and retrospectives.</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>Projects</h2>
+    <div class="card">
+      <h3>Systems Engineer</h3>
+      <p><strong>TATA Consultancy Services, India</strong> | July 2019 – May 2022</p>
+      <ul>
+        <li>Managed and supported the internal HR application Ultimatix, focusing on the employee separation workflow and automating manual processes with SQL functions and scripts.</li>
+        <li>Developed real-time reporting views and automated SQL jobs that reduced manual work by 20%, enhancing operational efficiency for HR managers.</li>
+        <li>Performed comprehensive manual testing of application updates, regression tests, and usability improvements, reporting defects with clear, actionable feedback.</li>
+        <li>Collaborated with cross-functional teams in Agile environments, contributing to sprint planning, daily stand-ups, and continuous system improvements.</li>
+        <li>Implemented index tuning and query optimization strategies that improved database response times and system performance.</li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="project">
-        <h3>Automated Email Template System</h3>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
-        <ul>
-          <li>Developed a web-based email templating system for academic staff at Swansea University to streamline responses to student inquiries.</li>
-          <li>Used User-Centered Design (UCD) approach, conducted user research to identify pain points and informed design decisions.</li>
-          <li>Created high-fidelity mockups and prototypes in Figma.</li>
-          <li>Implemented a clean, accessible front-end using HTML, CSS, and JS.</li>
-          <li>Improved communication efficiency through automation and design.</li>
-          <li>Followed structured Waterfall methodology from requirement gathering to testing.</li>
-        </ul>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>Automated Email Template System (Master's Project)</h3>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Figma</p>
+      <ul>
+        <li>Developed a web-based email template builder to help academic staff at Swansea University streamline responses to student inquiries, especially for extenuating circumstances.</li>
+        <li>Conducted user research to understand pain points and designed high-fidelity prototypes using Figma applying User-Centered Design principles.</li>
+        <li>Implemented an accessible, clean front-end interface automating repetitive tasks, resulting in a significant improvement in communication efficiency.</li>
+        <li>Followed a structured waterfall methodology through requirement gathering, design, development, and testing phases.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Temu Accessibility Prototype (Human-Computer Interaction Coursework)</h3>
+      <p><strong>Technologies:</strong> Figma</p>
+      <ul>
+        <li>Designed a comprehensive Figma prototype addressing usability and accessibility issues in the Temu mobile app based on detailed user feedback.</li>
+        <li>Incorporated features such as customizable text sizes, contrast settings, grayscale/inverted colors, and simplified navigation to enhance inclusivity.</li>
+        <li>Demonstrated a strong grasp of inclusive design and accessibility standards, improving overall user experience.</li>
+      </ul>
+      <div class="pdf-link">
+        <a href="temu-prototype.pdf" target="_blank" rel="noopener">View Prototype PDF</a>
       </div>
+    </div>
+  </section>
 
-      <div class="project">
-        <h3>Temu Accessibility Prototype</h3>
-        <p><strong>Technologies:</strong> Figma</p>
-        <ul>
-          <li>Designed a comprehensive Figma prototype to address usability and accessibility flaws in the Temu mobile app based on user feedback.</li>
-          <li>Enhanced user experience via better notification management and accessibility features.</li>
-          <li>Proposed solutions like customizable text size, contrast settings, grayscale/inverted color modes, and simplified navigation.</li>
-          <li>Demonstrated strong understanding of inclusive and accessible design principles.</li>
-        </ul>
-        <div class="pdf-link">
-          <a href="temu-prototype.pdf" target="_blank">View Prototype PDF</a>
-        </div>
-      </div>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>MSc Computer Science</h3>
+      <p><strong>Swansea University, UK</strong> | Sep 2023 – Dec 2024 (Ongoing)</p>
+      <ul>
+        <li>Specialization in Database Design, Web Development, and SQL Programming</li>
+        <li>Practical experience with cloud computing, Python, ETL pipelines, and Java integration</li>
+        <li>Developed backend-driven applications and normalized database schemas through coursework and projects</li>
+      </ul>
+    </div>
+  </section>
 
-    </section>
-  </main>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Saisree</p>
-  </footer>
+<footer>
+  &copy; 2025 Saisree | Portfolio designed for SQL Developer & QA roles
+</footer>
+
 </body>
 </html>
